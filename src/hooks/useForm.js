@@ -22,12 +22,12 @@ export const useForm = initialValue => {
   export const useLocalStorage = (key, initialvalue) => {
     const [storedValue, setStoredValue] = useState(() => {
         const item = localStorage.getItem(key);
-        // return item ? JSON.parse(item) : initialvalue;
-        if(localStorage.getItem(key)){
-            return setValue(JSON.parse(localStorage.getItem(key)))
-        }
-        localStorage.setItem(key, JSON.stringify(initialvalue))
-        return initialvalue;
+        return item ? JSON.parse(item) : initialvalue;
+        // if(localStorage.getItem(key)){
+        //     return setValue(JSON.parse(localStorage.getItem(key)))
+        // }
+        // localStorage.setItem(key, JSON.stringify(initialvalue))
+        // return initialvalue;
     });
   
     const setValue = (value) => {
