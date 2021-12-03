@@ -31,19 +31,19 @@ const initialValue = {
 
 const CheckoutForm = (props) => {
   // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = useStorage(false);
-  const [values, setValues] = useState(initialValue);
+  // const [showSuccessMessage, setShowSuccessMessage] = useStorage(false);
+  // const [values, setValues] = useState(initialValue);
 
-  //const [values, showSuccessMessage, handleChanges, handleSubmit] = useForm(initialValue);
+  const [values, showSuccessMessage, handleChanges, handleSubmit] = useForm(initialValue);
 
-  const handleChanges = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
+  // const handleChanges = (e) => {
+  //   setValues({ ...values, [e.target.name]: e.target.value });
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowSuccessMessage(true);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setShowSuccessMessage(true);
+  // };
 
   return (
     <>
