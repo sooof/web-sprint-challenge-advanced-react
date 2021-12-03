@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default class PlantList extends Component {
