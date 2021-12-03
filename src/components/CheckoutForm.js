@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import {useForm} from "../hooks/useForm";
+import useForm from "../hooks/useForm";
 
 const initialValue = {
   firstName: "",
@@ -10,20 +10,20 @@ const initialValue = {
   zip: "",
 };
 
-const useForm = initialValue => {
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [values, setValues] = useState(initialValue);
+// const useForm = initialValue => {
+//   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+//   const [values, setValues] = useState(initialValue);
 
-  const handleChanges = (e) => {
-      setValues({ ...values, [e.target.name]: e.target.value });
-    };
+//   const handleChanges = (e) => {
+//       setValues({ ...values, [e.target.name]: e.target.value });
+//     };
   
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      setShowSuccessMessage(true);
-    };
-  return [values, showSuccessMessage, handleChanges, handleSubmit];
-}
+//     const handleSubmit = (e) => {
+//       e.preventDefault();
+//       setShowSuccessMessage(true);
+//     };
+//   return [values, showSuccessMessage, handleChanges, handleSubmit];
+// }
 
 // This form should be handled by a "useForm" custom hook
 // Build out the logic needed for a form custom hook (see the useForm.js file)
